@@ -9,7 +9,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class Usuario
@@ -17,7 +18,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="Usuarios")
  */
-class Usuario{
+class Usuario implements UserInterface {
 
     /**
      * @var
@@ -29,11 +30,14 @@ class Usuario{
     private $cod_usu;
     /**
      * @ORM\Column(type="text")
+     * @Assert\Email(message="")
      */
     private $correo;
     /**
      * @var
      * @ORM\Column(type="text")
+     *
+     * @Assert\NotNull(message="Este campo no puede estar vacio")
      */
     private $password;
     /**
@@ -43,11 +47,13 @@ class Usuario{
     /**
      * @var
      * @ORM\Column(type="integer", length=5)
+     * @Assert\Length(max="5", min="5")
      */
     private $CP;
     /**
      * @var
      * @ORM\Column(type="integer", length=9)
+     * @Assert\Length(max="9", min="9")
      */
     private $telefono;
 
@@ -136,4 +142,23 @@ class Usuario{
         return $this->cod_usu;
     }
 
+    public function getRoles()
+    {
+        return 'role_user';
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function getUsername()
+    {
+        return $this->correo;
+    }
+
+    public function eraseCredentials()
+    {
+        return null;
+    }
 }

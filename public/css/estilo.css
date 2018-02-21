@@ -1,0 +1,66 @@
+position: fixed;
+width: 500px;
+height: 200px;
+top: 50%;
+left: 50%;
+margin-top: -100px; /* Negative half of height. */
+margin-left: -250px; /* Negative half of width. */position: fixed;
+width: 500px;
+height: 200px;
+top: 50%;
+left: 50%;
+margin-top: -100px; /* Negative half of height. */
+margin-left: -250px; /* Negative half of width. */position: fixed;
+width: 500px;
+height: 200px;
+top: 50%;
+left: 50%;
+margin-top: -100px; /* Negative half of height. */
+margin-left: -250px; /* Negative half of width. */position: fixed;
+width: 500px;
+height: 200px;
+top: 50%;
+left: 50%;
+margin-top: -100px; /* Negative half of height. */
+margin-left: -250px; /* Negative half of width. */@charset "utf-8";
+#listado-nav{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+#panel-lateral{
+	margin: 0px;
+	padding: 0px;
+	
+}
+.lista-a{
+	display: inline-block;
+	margin: 0px;
+	padding: 5px;
+	float: left;
+}
+.lista-b{
+	text-align: center;
+	list-style-type: none;
+	margin: 0px;
+}
+.vinculo{	
+	padding: 14px 16px;
+	margin: 0px;
+	text-decoration: none;
+	color: black;
+	display: block;
+	border: solid thin;
+}
+.vinculo:hover{
+	background-color: aquamarine;
+	cursor: pointer;
+}
+#newmessage{
+	display: none;
+	box-shadow: 0px 5px 12px 5px grey;
+}
+
+
+

@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Registro</title>
+	<link href="{{ asset("css/styles.css") }}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+	<style>
+		li {color: red;}
+		input:focus {outline: none; margin: 0;}
+	</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+
+<body>
+<div class="text-center" style="padding:50px 0; text-align: center;">
+	<div class="logo">Registro</div>
+
+	<!-- Main Form -->
+
+	<div class="login-form-1">
+        {{ form_start(form) }}
+		<div class="login-form-main-message"></div>
+		<div class="main-login-form">
+			<div class="login-group" style="text-align: left;">
+				<div class="form-group">
+					<label for="correo" class="sr-only">Direccion de Correo</label><br/>
+					{{ form_widget(form.correo, {"attr": {"class": "form-control"}}) }}
+                    {% if form_errors(form.correo) %}
+						<div id="reg_error">
+                            {{ form_errors(form.correo) }}
+						</div>
+                    {% endif %}
+				</div>
+				<div class="form-group">
+					<label for="reg_password" class="sr-only">Password</label>
+					{{ form_widget(form.password.first, {'attr': {"class": "form-control"}}) }}
+                    {% if form_errors(form.password.first) %}
+						<div id="reg_error">
+                            {{ form_errors(form.password.first) }}
+						</div>
+                    {% endif %}
+				</div>
+				<div class="form-group">
+					<label for="reg_password_confirm" class="sr-only">Confirmar Password</label>
+                    {{ form_widget(form.password.second, {'attr': {"class": "form-control"}}) }}
+				</div>
+				<div class="form-group">
+					<label for="codigo_postal" class="sr-only">Codigo Postal</label>
+                    {{ form_widget(form.CP, {'attr': {"class": "form-control"}}) }}
+                    {% if form_errors(form.CP) %}
+						<div id="reg_error">
+                            {{ form_errors(form.CP) }}
+						</div>
+                    {% endif %}
+				</div>
+				<div class="form-group">
+					<label for="direccion" class="sr-only">Direccion</label>
+                    {{ form_widget(form.direccion, {'attr': {"class": "form-control"}}) }}
+				</div>
+				<div class="form-group">
+					<label for="telefono" class="sr-only">Telefono</label>
+                    {{ form_widget(form.telefono, {'attr': {"class": "form-control"}}) }}
+                    {% if form_errors(form.telefono) %}
+						<div id="reg_error">
+                            {{ form_errors(form.telefono) }}
+						</div>
+                    {% endif %}
+				</div>
+			</div>
+			{{ form_widget(form.Registro, {'attr': {"class": "login-button"}}) }}
+		</div>
+		<div class="etc-login-form">
+			<p>¿Ya tienes una cuenta? <br><a href="{{ url('login') }}">Iniciar sesión</a></p>
+		</div>
+        {{ form_end(form) }}
+	</div>
+
+	<!-- end:Main Form -->
+
+</div>
+<script type="text/javascript">
+</script>
+</body>
+
+</html>
