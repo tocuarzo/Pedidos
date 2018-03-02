@@ -46,6 +46,7 @@ class Login extends Controller {
         $formularioRegistro->handleRequest($request);
         if ($formularioRegistro->isSubmitted() && $formularioRegistro->isValid()){ //los campos se verifican en cliente y en servidor
             $usuario = $formularioRegistro->getData();
+            $usuario->setAdmin(0);
             $em = $this->getDoctrine()->getManager();
             $em->persist($usuario);
             $em->flush();

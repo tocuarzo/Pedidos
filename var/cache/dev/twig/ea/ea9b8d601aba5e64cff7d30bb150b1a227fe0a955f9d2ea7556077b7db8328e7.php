@@ -15,11 +15,11 @@ class __TwigTemplate_9e99ce1d8888025500b686dcdf5e3c8ceb5521bf2f3b74b250b70d775e8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_495880f6a167627c98955b03d6e48a81b34b7956bbad39c78e7820a965dfb7b7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_495880f6a167627c98955b03d6e48a81b34b7956bbad39c78e7820a965dfb7b7->enter($__internal_495880f6a167627c98955b03d6e48a81b34b7956bbad39c78e7820a965dfb7b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_integer.html.twig"));
+        $__internal_36ed657fdd273adc64379d39c6432bffac5c0d25ec761abf43779acca776f4ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_36ed657fdd273adc64379d39c6432bffac5c0d25ec761abf43779acca776f4ee->enter($__internal_36ed657fdd273adc64379d39c6432bffac5c0d25ec761abf43779acca776f4ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_integer.html.twig"));
 
-        $__internal_35f349ddca4e1fdcf729415ed09ca8f9d1cc781c9b6ffa9ff8f208b13b9033f4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_35f349ddca4e1fdcf729415ed09ca8f9d1cc781c9b6ffa9ff8f208b13b9033f4->enter($__internal_35f349ddca4e1fdcf729415ed09ca8f9d1cc781c9b6ffa9ff8f208b13b9033f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_integer.html.twig"));
+        $__internal_b6d6a1aa84044a78c27b8ce773448ef271e2eada145c20b5510e7f12d2ab05a0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b6d6a1aa84044a78c27b8ce773448ef271e2eada145c20b5510e7f12d2ab05a0->enter($__internal_b6d6a1aa84044a78c27b8ce773448ef271e2eada145c20b5510e7f12d2ab05a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_integer.html.twig"));
 
         // line 1
         if (twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["field_options"]) || array_key_exists("field_options", $context) ? $context["field_options"] : (function () { throw new Twig_Error_Runtime('Variable "field_options" does not exist.', 1, $this->getSourceContext()); })()), "format", array())) {
@@ -36,10 +36,10 @@ class __TwigTemplate_9e99ce1d8888025500b686dcdf5e3c8ceb5521bf2f3b74b250b70d775e8
 ";
         }
         
-        $__internal_495880f6a167627c98955b03d6e48a81b34b7956bbad39c78e7820a965dfb7b7->leave($__internal_495880f6a167627c98955b03d6e48a81b34b7956bbad39c78e7820a965dfb7b7_prof);
+        $__internal_36ed657fdd273adc64379d39c6432bffac5c0d25ec761abf43779acca776f4ee->leave($__internal_36ed657fdd273adc64379d39c6432bffac5c0d25ec761abf43779acca776f4ee_prof);
 
         
-        $__internal_35f349ddca4e1fdcf729415ed09ca8f9d1cc781c9b6ffa9ff8f208b13b9033f4->leave($__internal_35f349ddca4e1fdcf729415ed09ca8f9d1cc781c9b6ffa9ff8f208b13b9033f4_prof);
+        $__internal_b6d6a1aa84044a78c27b8ce773448ef271e2eada145c20b5510e7f12d2ab05a0->leave($__internal_b6d6a1aa84044a78c27b8ce773448ef271e2eada145c20b5510e7f12d2ab05a0_prof);
 
     }
 
@@ -65,6 +65,6 @@ class __TwigTemplate_9e99ce1d8888025500b686dcdf5e3c8ceb5521bf2f3b74b250b70d775e8
 {% else %}
     {{ value|number_format }}
 {% endif %}
-", "@EasyAdmin/default/field_integer.html.twig", "C:\\Pedidos\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\default\\field_integer.html.twig");
+", "@EasyAdmin/default/field_integer.html.twig", "D:\\Pedidos\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\default\\field_integer.html.twig");
     }
 }

@@ -12,8 +12,15 @@
                 <tbody>
                 {% for producto in productos %}
                     <tr>
-                        <th class="align-middle" scope="row">{{ producto.cod_prod }}</th><td class="align-middle">{{ producto.nombre }}</td><td class="align-middle">{{ producto.categoria.nombre}}</td><td class="align-middle">{{ producto.precio }}</td><td>
-                            <input class="form-control" type="number"></td><td><button class="btn btn-outline-primary" onclick="window.location.href = '{{ path('addCarrito', {'item_id' : producto.cod_prod}, {'cantidad' : 1})}}'">añadir al carrito</button></td>
+                        {{ form_start(form) }}
+                        <th class="align-middle" scope="row">{{ producto.cod_prod }}</th>
+                            <td class="align-middle">{{ producto.nombre }}</td>
+                            <td class="align-middle">{{ producto.categoria.nombre}}</td>
+                            <td class="align-middle">{{ producto.precio }}</td>
+                            <td>
+                                {{ form_widget(form.cantidad, {'attr' : {'class' : 'form-control'}}) }}</td><td>{{ form_widget(form.submit, {'attr' : {'class' : 'btn btn-outline-primary'}}) }}
+                            </td>
+                        {{ form_end(form) }}
                     </tr>
                 {% endfor %}
                 </tbody>

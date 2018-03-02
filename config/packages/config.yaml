@@ -1,4 +1,10 @@
 easy_admin:
+    design:
+      menu:
+        - {label: 'Productos',  entity: 'Producto'}
+        - {label: 'Usuarios', icon: 'users', entity: 'Usuario'}
+        - {label: 'Categorias', entity: 'Categoria'}
+        - { label: 'Volver', icon: 'delete', route: 'principal' }
     site_name: Mis productos
     entities:
       Producto:
@@ -8,7 +14,8 @@ easy_admin:
       Usuario:
         class: App\Entity\Usuario
         list:
-          fields: ['cod_usu', 'correo', 'direccion', 'CP', 'telefono', 'admin']
+          fields:
+            ['cod_usu', {property: 'correo', type: 'email'}, 'direccion', {label: 'Codigo Postal' ,property: 'CP', type: 'raw'},{property: 'telefono', type: 'tel'}, 'admin']
       Categoria:
         class: App\Entity\Categoria
         list:

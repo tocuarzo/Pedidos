@@ -7,24 +7,25 @@
         <title>{% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
+    {% set current_path = path(app.request.get('_route')) %}
     <body style="background-color: #4DE885;">
     {% block navbar %}
     <nav class="navbar navbar-expand bg-light">
         <h4 class="navbar-brand my-0">Bienvenido {{ app.user.correo }}</h4>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Mi usuario</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Compras</a></li>
-            <li class="nav-item"><a class="nav-item btn btn-outline-success ml-3 px-5" href="{{ path('carrito') }}">Carrito</a></li>
-            {% if app.user.admin %}
-            <li class="nav-item"><a class="nav-item btn btn-outline-info ml-3 px-5" href="/zonaAdmin">Zona admin</a></li>
-            {% endif %}
-        </ul>
-
-        <form class="form form-inline">
-            <input type="text" class="form-control mr-3">
-            <button class="btn btn-outline-success">Buscar</button>
-        </form>
+        <div class="navbar w-100 justify-content-between">
+            <div class="btn-group" role="group">
+                <a class="btn btn-outline-success {% if current_path == path('principal') %}
+                    active
+                  {% endif %}px-5" href="{{ url('principal') }}">Principal</a>
+                <a class="btn btn-outline-success {% if current_path == path('carrito') %}
+                    active
+                  {% endif %}px-5" href="{{ path('carrito') }}">Carrito</a>
+                {% if app.user.admin %}
+                <a class="btn btn-outline-info px-5" href="/zonaAdmin">Zona admin</a>
+                {% endif %}
+            </div>
         <a class="btn btn-danger ml-3" href="{{ path('logout') }}">Cerrar Sesion</a>
+        </div>
     </nav>
     {% endblock %}
         {% block body %}{% endblock %}

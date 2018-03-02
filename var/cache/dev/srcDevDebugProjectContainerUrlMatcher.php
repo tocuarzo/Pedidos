@@ -67,8 +67,13 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             // addCarrito
-            if (0 === strpos($pathinfo, '/principal/addCarrito') && preg_match('#^/principal/addCarrito/(?P<item_id>[^/]++)/(?P<cantidad>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/principal/addCarrito') && preg_match('#^/principal/addCarrito/(?P<id>[^/]++)/(?P<cantidad>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'addCarrito')), array (  '_controller' => 'App\\Controller\\Tienda::addCarrito',));
+            }
+
+            // deleteCarrito
+            if ('/principal/deleteCarrito' === $pathinfo) {
+                return array (  '_controller' => 'App\\Controller\\Tienda::deleteCarrito',  '_route' => 'deleteCarrito',);
             }
 
             // carrito

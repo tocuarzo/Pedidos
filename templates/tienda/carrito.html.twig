@@ -1,8 +1,36 @@
 {% extends "base.html.twig" %}
 {% block body %}
-    {% for producto in carrito %}
-        {{ carrito.producto.nombre }}<br>
-        {{ carrito.cantidad }}
-    {% endfor %}
+    {% set compra = false %}
+    <div class="jumbotron container p-4">
+        <table class="table table-bordered table-striped bg-light">
+            <thead>
+            <tr>
+                <th class="text-center" width="5%" scope="col">id de articulo</th>
+                <th class="align-middle text-center" width="50%" scope="col">nombre de articulo</th>
+                <th class="align-middle text-center" width="10%" scope="col">Categoria</th>
+                <th class="align-middle text-center" width="10%" scope="col">precio Total</th>
+                <th class="align-middle text-center" width="10%" scope="col">Unidades</th>
+                <th class="align-middle text-center" width="15%" scope="col">Borrar del carrito</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in carrito %}
+                <tr>
+                    <th class="align-middle text-center" scope="row">{{ item.producto.cod_prod }}</th><td class="align-middle">{{ item.producto.nombre }}</td><td class="align-middle text-center">{{ item.producto.categoria.nombre}}</td>
+                    <td class="align-middle text-center">{{ item.unidades }}</td>
+                    <td class="align-middle text-center">{{ item.unidades }}</td>
+                    <td class="align-middle text-center"><i><a class="align-middle badge badge-danger text-center p-2 px-3" href='{{ path('deleteCarrito', {'id' : item.producto.cod_prod, 'cantidad' : 1})}}'>X</a></i></td>
+                </tr>
+                {% set compra = true %}
+            {% endfor %}
+            </tbody>
+        </table>
+        {% if (compra) %}
+            <div class="text-center">
+                <button class="btn btn-success px-5">Comprar</button>
+            </div>
+
+        {% endif %}
+    </div>
 
 {% endblock %}
