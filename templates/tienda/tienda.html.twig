@@ -1,0 +1,23 @@
+    {% extends "base.html.twig" %}
+    {% block title %}Bienvenido {{ user }} {% endblock %}
+
+    {% block body %}
+        <div class="jumbotron container p-4">
+            <table class="table table-bordered table-striped bg-light">
+                <thead>
+                <tr>
+                    <th class="text-center" width="12%" scope="col">id de articulo</th><th scope="col">nombre de articulo</th><th width="1%" scope="col">Categoria</th><th width="1%" scope="col">precio</th><th width="5%" scope="col">Unidades</th><th class="text-center" width="15%" scope="col">añadir al carrito</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for producto in productos %}
+                    <tr>
+                        <th class="align-middle" scope="row">{{ producto.cod_prod }}</th><td class="align-middle">{{ producto.nombre }}</td><td class="align-middle">{{ producto.categoria.nombre}}</td><td class="align-middle">{{ producto.precio }}</td><td>
+                            <input class="form-control" type="number"></td><td><button class="btn btn-outline-primary" onclick="window.location.href = '{{ path('addCarrito', {'item_id' : producto.cod_prod}, {'cantidad' : 1})}}'">añadir al carrito</button></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endblock %}
+

@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
+    <body style="background-color: #4DE885;">
+    {% block navbar %}
+    <nav class="navbar navbar-expand bg-light">
+        <h4 class="navbar-brand my-0">Bienvenido {{ app.user.correo }}</h4>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Mi usuario</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Compras</a></li>
+            <li class="nav-item"><a class="nav-item btn btn-outline-success ml-3 px-5" href="{{ path('carrito') }}">Carrito</a></li>
+            {% if app.user.admin %}
+            <li class="nav-item"><a class="nav-item btn btn-outline-info ml-3 px-5" href="/zonaAdmin">Zona admin</a></li>
+            {% endif %}
+        </ul>
+
+        <form class="form form-inline">
+            <input type="text" class="form-control mr-3">
+            <button class="btn btn-outline-success">Buscar</button>
+        </form>
+        <a class="btn btn-danger ml-3" href="{{ path('logout') }}">Cerrar Sesion</a>
+    </nav>
+    {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

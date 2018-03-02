@@ -45,8 +45,8 @@ class Producto
     private $precio;
     /**
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\Categoria")
-     * @ORM\JoinColumn(referencedColumnName="cod_cat", nullable=true)
+     * @ORM\ManyToOne(targetEntity="Categoria", inversedBy="productos")
+     * @ORM\JoinColumn(name="categoria", referencedColumnName="cod_cat")
      */
     private $categoria;
 
@@ -109,7 +109,7 @@ class Producto
     /**
      * @param mixed $categoria
      */
-    public function setCategoria($categoria): void
+    public function setCategoria($categoria)
     {
         $this->categoria = $categoria;
     }
@@ -117,8 +117,19 @@ class Producto
     /**
      * @return mixed
      */
-    public function getCodProd()
+    public function getCod_Prod()
     {
         return $this->cod_prod;
     }
+    public function setCod_Prod($cod_prod){
+        $this->cod_prod = $cod_prod;
+    }
+    public function __get($nombre){
+        return $this->cod_prod;
+    }
+    public function __toString()
+    {
+        return $this->nombre;
+    }
+
 }

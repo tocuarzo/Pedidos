@@ -30,11 +30,11 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
 
-        // raiz
+        // redirect
         if ('' === $trimmedPathinfo) {
-            $ret = array (  '_controller' => 'App\\Controller\\Login::redirigir',  '_route' => 'raiz',);
+            $ret = array (  '_controller' => 'App\\Controller\\Login::redirigir',  '_route' => 'redirect',);
             if (substr($pathinfo, -1) !== '/') {
-                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'raiz'));
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'redirect'));
             }
 
             return $ret;
@@ -45,12 +45,40 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'App\\Controller\\Login::login',  '_route' => 'login',);
         }
 
+        // logout
+        if ('/logout' === $pathinfo) {
+            return array('_route' => 'logout');
+        }
+
         // registro
         if ('/registro' === $pathinfo) {
             return array (  '_controller' => 'App\\Controller\\Login::Registro',  '_route' => 'registro',);
         }
 
-        if (0 === strpos($pathinfo, '/_')) {
+        if (0 === strpos($pathinfo, '/principal')) {
+            // principal
+            if ('/principal' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'App\\Controller\\Tienda::menuPrincipal',  '_route' => 'principal',);
+                if (substr($pathinfo, -1) !== '/') {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'principal'));
+                }
+
+                return $ret;
+            }
+
+            // addCarrito
+            if (0 === strpos($pathinfo, '/principal/addCarrito') && preg_match('#^/principal/addCarrito/(?P<item_id>[^/]++)/(?P<cantidad>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'addCarrito')), array (  '_controller' => 'App\\Controller\\Tienda::addCarrito',));
+            }
+
+            // carrito
+            if ('/principal/carrito' === $pathinfo) {
+                return array (  '_controller' => 'App\\Controller\\Tienda::carrito',  '_route' => 'carrito',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/_')) {
             // _twig_error_test
             if (0 === strpos($pathinfo, '/_error') && preg_match('#^/_error/(?P<code>\\d+)(?:\\.(?P<_format>[^/]++))?$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => '_twig_error_test')), array (  '_controller' => 'twig.controller.preview_error:previewErrorPageAction',  '_format' => 'html',));
@@ -120,6 +148,29 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => '_profiler_exception_css')), array (  '_controller' => 'web_profiler.controller.exception:cssAction',));
                 }
 
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/zonaAdmin')) {
+            // easyadmin
+            if ('/zonaAdmin' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'easyadmin',);
+                if (substr($pathinfo, -1) !== '/') {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'easyadmin'));
+                }
+
+                return $ret;
+            }
+
+            // admin
+            if ('/zonaAdmin' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
+                if (substr($pathinfo, -1) !== '/') {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'admin'));
+                }
+
+                return $ret;
             }
 
         }

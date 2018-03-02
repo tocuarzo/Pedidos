@@ -19,7 +19,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Categoria {
     /**
-     * @var $cod_cat
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -35,7 +34,7 @@ class Categoria {
      */
     private $nombre;
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Producto", mappedBy="categoria")
+     * @ORM\OneToMany(targetEntity="Producto", mappedBy="categoria")
      */
     private $productos;
 
@@ -43,32 +42,40 @@ class Categoria {
     {
         $this->productos = new ArrayCollection();
     }
-    public function getCodCat()
+
+    public function setcod_cat($cod_cat)
     {
-        return $this->cod_cat;
+        $this->cod_cat = $cod_cat;
     }
 
-    /**
-     * @return mixed
-     */
+    public function __get($nombre){
+        if ($nombre == "cod_cat") return $this->cod_cat;
+        if ($nombre == "nombre") return $this->nombre;
+    }
+    public function getcod_cat() {
+        $cod_cat = $this->cod_cat;
+        return $cod_cat;
+    }
+
     public function getNombre()
     {
         return $this->nombre;
     }
 
-    /**
-     * @param mixed $nombre
-     */
-    public function setNombre($nombre): void
+    public function setNombre($nombre)
     {
         $this->nombre = $nombre;
     }
 
-    /**
-     * @return ArrayCollection
-     */
-    public function getProductos(): ArrayCollection
+    public function getProductos()
     {
         return $this->productos;
     }
+
+    public function __toString()
+    {
+       return $this->nombre;
+    }
+
+
 }

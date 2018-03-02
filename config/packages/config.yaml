@@ -1,0 +1,15 @@
+easy_admin:
+    site_name: Mis productos
+    entities:
+      Producto:
+        class: App\Entity\Producto
+        list:
+          fields: ['cod_prod', 'nombre', 'stock', 'precio', { property: 'categoria.nombre', label: 'Categoria' }]
+      Usuario:
+        class: App\Entity\Usuario
+        list:
+          fields: ['cod_usu', 'correo', 'direccion', 'CP', 'telefono', 'admin']
+      Categoria:
+        class: App\Entity\Categoria
+        list:
+            fields: ['cod_cat', 'nombre', 'productos']

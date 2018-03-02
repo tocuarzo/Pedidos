@@ -13,14 +13,12 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class RegistroType extends AbstractType
-{
+class RegistroType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add("correo", EmailType::class)
-            ->add("password", RepeatedType::class, array(
-                'type' => PasswordType::class))
+            ->add("password", RepeatedType::class, array('type' => PasswordType::class))
             ->add("CP", IntegerType::class)
             ->add("direccion", TextType::class)
             ->add("telefono", IntegerType::class)

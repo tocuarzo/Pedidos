@@ -18,7 +18,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity
  * @ORM\Table(name="Usuarios")
  */
-class Usuario implements UserInterface {
+class Usuario implements UserInterface, \Serializable {
 
     /**
      * @var
@@ -30,13 +30,12 @@ class Usuario implements UserInterface {
     private $cod_usu;
     /**
      * @ORM\Column(type="text")
-     * @Assert\Email(message="")
+     * @Assert\Email(message="Esto no es un correo")
      */
     private $correo;
     /**
      * @var
      * @ORM\Column(type="text")
-     *
      * @Assert\NotNull(message="Este campo no puede estar vacio")
      */
     private $password;
@@ -47,19 +46,27 @@ class Usuario implements UserInterface {
     /**
      * @var
      * @ORM\Column(type="integer", length=5)
-     * @Assert\Length(max="5", min="5")
+     * @Assert\Length(max="5", min="5", exactMessage="Los codigos postales tienen 5 digitos")
      */
     private $CP;
     /**
      * @var
      * @ORM\Column(type="integer", length=9)
-     * @Assert\Length(max="9", min="9")
+     * @Assert\Length(max="9", min="9", exactMessage="Los Numeros de telefono tienen 9 digitos")
      */
     private $telefono;
+    /**
+     * @ORM\Column(type="boolean", length=1, nullable=false)
+     *
+     */
+    private $admin;
 
     /**
      * @return mixed
      */
+    public function getCod_usu(){
+        return $this->cod_usu;
+    }
     public function getCorreo()
     {
         return $this->correo;
@@ -142,9 +149,27 @@ class Usuario implements UserInterface {
         return $this->cod_usu;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAdmin()
+    {
+        return $this->admin;
+    }
+
+    /**
+     * @param mixed $admin
+     */
+    public function setAdmin($admin): void
+    {
+        $this->admin = $admin;
+    }
+
+
     public function getRoles()
     {
-        return 'role_user';
+        if ($this->admin) return array('ROLE_ADMIN');
+        return array('ROLE_USER');
     }
 
     public function getSalt()
@@ -160,5 +185,42 @@ class Usuario implements UserInterface {
     public function eraseCredentials()
     {
         return null;
+    }
+
+    /**
+     * String representation of object
+     * @link http://php.net/manual/en/serializable.serialize.php
+     * @return string the string representation of the object or null
+     * @since 5.1.0
+     */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->cod_usu,
+            $this->correo,
+            $this->password,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+
+    /**
+     * Constructs the object
+     * @link http://php.net/manual/en/serializable.unserialize.php
+     * @param string $serialized <p>
+     * The string representation of the object.
+     * </p>
+     * @return void
+     * @since 5.1.0
+     */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->cod_usu,
+            $this->correo,
+            $this->password,
+            // see section on salt below
+            // $this->salt
+            ) = unserialize($serialized);
     }
 }

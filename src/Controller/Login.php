@@ -10,21 +10,18 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Form\RegistroType;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Usuario;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 
 class Login extends Controller {
-
     /**
-     * @Route("/", name="raiz")
+     * @Route("/", name="redirect")
      */
     public function redirigir(){
-        return new RedirectResponse("/login");
+        return $this->redirectToRoute("login");
     }
     /**
      * @Route("/login", name="login")
@@ -32,7 +29,7 @@ class Login extends Controller {
     public function login(AuthenticationUtils $authUtils)
     {
         // get the login error if there is one
-            if ($this->getUser() != null) return $this->redirectToRoute("main");
+            if ($this->getUser() != null) return $this->redirectToRoute("principal");
             $error = $authUtils->getLastAuthenticationError();
 
             // last username entered by the user
@@ -47,8 +44,11 @@ class Login extends Controller {
         $usuario = new Usuario();
         $formularioRegistro = $this->createForm(RegistroType::class, $usuario);
         $formularioRegistro->handleRequest($request);
-        if ($formularioRegistro->isSubmitted() && $formularioRegistro->isValid()){
+        if ($formularioRegistro->isSubmitted() && $formularioRegistro->isValid()){ //los campos se verifican en cliente y en servidor
             $usuario = $formularioRegistro->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($usuario);
+            $em->flush();
             return $this->redirectToRoute("login");
         }
         return $this->render("/login/Registro.html.twig", array("form" => $formularioRegistro->createView()));
