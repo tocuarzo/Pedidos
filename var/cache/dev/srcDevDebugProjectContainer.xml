@@ -476,7 +476,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.4aTqlGk"/>
+      <argument type="service" id="service_locator.WxrPglx"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -2011,14 +2011,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -4168,24 +4160,14 @@
         <argument key="session" type="service" id="session" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.RSh3j3S" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="session" type="service" id="session" on-invalid="ignore"/>
-      </argument>
-    </service>
-    <service id="service_locator.4aTqlGk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.WxrPglx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Login:login" type="service" id="service_locator.8crJbMu"/>
-        <argument key="App\Controller\Tienda:addCarrito" type="service" id="service_locator.RSh3j3S"/>
-        <argument key="App\Controller\Tienda:carrito" type="service" id="service_locator.RSh3j3S"/>
-        <argument key="App\Controller\Tienda:deleteCarrito" type="service" id="service_locator.s6JY3QR"/>
+        <argument key="App\Controller\Tienda:carrito" type="service" id="service_locator.s6JY3QR"/>
         <argument key="App\Controller\Tienda:menuPrincipal" type="service" id="service_locator.s6JY3QR"/>
         <argument key="App\Controller\Login::login" type="service" id="service_locator.8crJbMu"/>
-        <argument key="App\Controller\Tienda::addCarrito" type="service" id="service_locator.RSh3j3S"/>
-        <argument key="App\Controller\Tienda::carrito" type="service" id="service_locator.RSh3j3S"/>
-        <argument key="App\Controller\Tienda::deleteCarrito" type="service" id="service_locator.s6JY3QR"/>
+        <argument key="App\Controller\Tienda::carrito" type="service" id="service_locator.s6JY3QR"/>
         <argument key="App\Controller\Tienda::menuPrincipal" type="service" id="service_locator.s6JY3QR"/>
       </argument>
     </service>

@@ -16,10 +16,16 @@
             <tbody>
             {% for item in carrito %}
                 <tr>
-                    <th class="align-middle text-center" scope="row">{{ item.producto.cod_prod }}</th><td class="align-middle">{{ item.producto.nombre }}</td><td class="align-middle text-center">{{ item.producto.categoria.nombre}}</td>
-                    <td class="align-middle text-center">{{ item.unidades }}</td>
-                    <td class="align-middle text-center">{{ item.unidades }}</td>
-                    <td class="align-middle text-center"><i><a class="align-middle badge badge-danger text-center p-2 px-3" href='{{ path('deleteCarrito', {'id' : item.producto.cod_prod, 'cantidad' : 1})}}'>X</a></i></td>
+                    <th class="align-middle text-center" scope="row">{{ item.producto.cod_prod }}</th>
+                    <td class="align-middle">{{ item.producto.nombre }}</td><td class="align-middle text-center">{{ item.producto.categoria.nombre}}</td>
+                    <td class="align-middle text-center">{{ item.uds * item.producto.precio }} Euros</td>
+                    <td class="align-middle text-center">{{ item.uds }}</td>
+                    <form method="POST" action="{{ path('carrito') }}">
+                        <input type="hidden" name="id" value="{{ item.producto.cod_prod }}">
+                        <td class="align-middle text-center">
+                            <input type="submit" class="btn btn-danger py-0 px-4" value="X">
+                        </td>
+                    </form>
                 </tr>
                 {% set compra = true %}
             {% endfor %}

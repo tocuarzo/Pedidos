@@ -21,29 +21,29 @@ class __TwigTemplate_22842ef6e06da2f9ae1716f7c34bc59c7da47010087690d1a09283aa187
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d05e01cc493d480a97f2bf271bed31d2a42602af4d04b8f2416daf5b4391b548 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d05e01cc493d480a97f2bf271bed31d2a42602af4d04b8f2416daf5b4391b548->enter($__internal_d05e01cc493d480a97f2bf271bed31d2a42602af4d04b8f2416daf5b4391b548_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "tienda/carrito.html.twig"));
+        $__internal_0fc3d2b7049858d919d74f4916ed5fb799c4a4105206764ba3e82d1421b4ea3d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0fc3d2b7049858d919d74f4916ed5fb799c4a4105206764ba3e82d1421b4ea3d->enter($__internal_0fc3d2b7049858d919d74f4916ed5fb799c4a4105206764ba3e82d1421b4ea3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "tienda/carrito.html.twig"));
 
-        $__internal_b8600664165dc882b75f17a14119ddece0114275e5224a62b62f1c8004de4c63 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b8600664165dc882b75f17a14119ddece0114275e5224a62b62f1c8004de4c63->enter($__internal_b8600664165dc882b75f17a14119ddece0114275e5224a62b62f1c8004de4c63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "tienda/carrito.html.twig"));
+        $__internal_10fc5f53c01c2d96edb44ed093076c32e30c431ddde76e5854cfcf16db7051d2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_10fc5f53c01c2d96edb44ed093076c32e30c431ddde76e5854cfcf16db7051d2->enter($__internal_10fc5f53c01c2d96edb44ed093076c32e30c431ddde76e5854cfcf16db7051d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "tienda/carrito.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d05e01cc493d480a97f2bf271bed31d2a42602af4d04b8f2416daf5b4391b548->leave($__internal_d05e01cc493d480a97f2bf271bed31d2a42602af4d04b8f2416daf5b4391b548_prof);
+        $__internal_0fc3d2b7049858d919d74f4916ed5fb799c4a4105206764ba3e82d1421b4ea3d->leave($__internal_0fc3d2b7049858d919d74f4916ed5fb799c4a4105206764ba3e82d1421b4ea3d_prof);
 
         
-        $__internal_b8600664165dc882b75f17a14119ddece0114275e5224a62b62f1c8004de4c63->leave($__internal_b8600664165dc882b75f17a14119ddece0114275e5224a62b62f1c8004de4c63_prof);
+        $__internal_10fc5f53c01c2d96edb44ed093076c32e30c431ddde76e5854cfcf16db7051d2->leave($__internal_10fc5f53c01c2d96edb44ed093076c32e30c431ddde76e5854cfcf16db7051d2_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_0c7cc48f840b0ac7e414a932235c0b806785b28a3c951340879d5fd9b3619828 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0c7cc48f840b0ac7e414a932235c0b806785b28a3c951340879d5fd9b3619828->enter($__internal_0c7cc48f840b0ac7e414a932235c0b806785b28a3c951340879d5fd9b3619828_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_66a89a32a1d3d33812b59fb4dd136e5c5932344a417898bea5034360980be0ac = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_66a89a32a1d3d33812b59fb4dd136e5c5932344a417898bea5034360980be0ac->enter($__internal_66a89a32a1d3d33812b59fb4dd136e5c5932344a417898bea5034360980be0ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_686cf2bf1a8956bf2775d748e328c1192796917523e55e2a6a35080d45f6672e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_686cf2bf1a8956bf2775d748e328c1192796917523e55e2a6a35080d45f6672e->enter($__internal_686cf2bf1a8956bf2775d748e328c1192796917523e55e2a6a35080d45f6672e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a57d64c3621c9f1891ed2e228d337308303c4eff82497ce93e3914c75b10ca22 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a57d64c3621c9f1891ed2e228d337308303c4eff82497ce93e3914c75b10ca22->enter($__internal_a57d64c3621c9f1891ed2e228d337308303c4eff82497ce93e3914c75b10ca22_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "    ";
@@ -72,55 +72,65 @@ class __TwigTemplate_22842ef6e06da2f9ae1716f7c34bc59c7da47010087690d1a09283aa187
                     <th class=\"align-middle text-center\" scope=\"row\">";
             // line 19
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "producto", array()), "cod_prod", array()), "html", null, true);
-            echo "</th><td class=\"align-middle\">";
+            echo "</th>
+                    <td class=\"align-middle\">";
+            // line 20
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "producto", array()), "nombre", array()), "html", null, true);
             echo "</td><td class=\"align-middle text-center\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "producto", array()), "categoria", array()), "nombre", array()), "html", null, true);
             echo "</td>
                     <td class=\"align-middle text-center\">";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "unidades", array()), "html", null, true);
-            echo "</td>
-                    <td class=\"align-middle text-center\">";
             // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "unidades", array()), "html", null, true);
-            echo "</td>
-                    <td class=\"align-middle text-center\"><i><a class=\"align-middle badge badge-danger text-center p-2 px-3\" href='";
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "uds", array()) * twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "producto", array()), "precio", array())), "html", null, true);
+            echo " Euros</td>
+                    <td class=\"align-middle text-center\">";
             // line 22
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("deleteCarrito", array("id" => twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "producto", array()), "cod_prod", array()), "cantidad" => 1)), "html", null, true);
-            echo "'>X</a></i></td>
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "uds", array()), "html", null, true);
+            echo "</td>
+                    <form method=\"POST\" action=\"";
+            // line 23
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("carrito");
+            echo "\">
+                        <input type=\"hidden\" name=\"id\" value=\"";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), $context["item"], "producto", array()), "cod_prod", array()), "html", null, true);
+            echo "\">
+                        <td class=\"align-middle text-center\">
+                            <input type=\"submit\" class=\"btn btn-danger py-0 px-4\" value=\"X\">
+                        </td>
+                    </form>
                 </tr>
                 ";
-            // line 24
+            // line 30
             $context["compra"] = true;
-            // line 25
+            // line 31
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
+        // line 32
         echo "            </tbody>
         </table>
         ";
-        // line 28
-        if ((isset($context["compra"]) || array_key_exists("compra", $context) ? $context["compra"] : (function () { throw new Twig_Error_Runtime('Variable "compra" does not exist.', 28, $this->getSourceContext()); })())) {
-            // line 29
+        // line 34
+        if ((isset($context["compra"]) || array_key_exists("compra", $context) ? $context["compra"] : (function () { throw new Twig_Error_Runtime('Variable "compra" does not exist.', 34, $this->getSourceContext()); })())) {
+            // line 35
             echo "            <div class=\"text-center\">
                 <button class=\"btn btn-success px-5\">Comprar</button>
             </div>
 
         ";
         }
-        // line 34
+        // line 40
         echo "    </div>
 
 ";
         
-        $__internal_686cf2bf1a8956bf2775d748e328c1192796917523e55e2a6a35080d45f6672e->leave($__internal_686cf2bf1a8956bf2775d748e328c1192796917523e55e2a6a35080d45f6672e_prof);
+        $__internal_a57d64c3621c9f1891ed2e228d337308303c4eff82497ce93e3914c75b10ca22->leave($__internal_a57d64c3621c9f1891ed2e228d337308303c4eff82497ce93e3914c75b10ca22_prof);
 
         
-        $__internal_0c7cc48f840b0ac7e414a932235c0b806785b28a3c951340879d5fd9b3619828->leave($__internal_0c7cc48f840b0ac7e414a932235c0b806785b28a3c951340879d5fd9b3619828_prof);
+        $__internal_66a89a32a1d3d33812b59fb4dd136e5c5932344a417898bea5034360980be0ac->leave($__internal_66a89a32a1d3d33812b59fb4dd136e5c5932344a417898bea5034360980be0ac_prof);
 
     }
 
@@ -136,7 +146,7 @@ class __TwigTemplate_22842ef6e06da2f9ae1716f7c34bc59c7da47010087690d1a09283aa187
 
     public function getDebugInfo()
     {
-        return array (  116 => 34,  109 => 29,  107 => 28,  103 => 26,  97 => 25,  95 => 24,  90 => 22,  86 => 21,  82 => 20,  74 => 19,  71 => 18,  67 => 17,  52 => 4,  49 => 3,  40 => 2,  11 => 1,);
+        return array (  126 => 40,  119 => 35,  117 => 34,  113 => 32,  107 => 31,  105 => 30,  96 => 24,  92 => 23,  88 => 22,  84 => 21,  78 => 20,  74 => 19,  71 => 18,  67 => 17,  52 => 4,  49 => 3,  40 => 2,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -159,10 +169,16 @@ class __TwigTemplate_22842ef6e06da2f9ae1716f7c34bc59c7da47010087690d1a09283aa187
             <tbody>
             {% for item in carrito %}
                 <tr>
-                    <th class=\"align-middle text-center\" scope=\"row\">{{ item.producto.cod_prod }}</th><td class=\"align-middle\">{{ item.producto.nombre }}</td><td class=\"align-middle text-center\">{{ item.producto.categoria.nombre}}</td>
-                    <td class=\"align-middle text-center\">{{ item.unidades }}</td>
-                    <td class=\"align-middle text-center\">{{ item.unidades }}</td>
-                    <td class=\"align-middle text-center\"><i><a class=\"align-middle badge badge-danger text-center p-2 px-3\" href='{{ path('deleteCarrito', {'id' : item.producto.cod_prod, 'cantidad' : 1})}}'>X</a></i></td>
+                    <th class=\"align-middle text-center\" scope=\"row\">{{ item.producto.cod_prod }}</th>
+                    <td class=\"align-middle\">{{ item.producto.nombre }}</td><td class=\"align-middle text-center\">{{ item.producto.categoria.nombre}}</td>
+                    <td class=\"align-middle text-center\">{{ item.uds * item.producto.precio }} Euros</td>
+                    <td class=\"align-middle text-center\">{{ item.uds }}</td>
+                    <form method=\"POST\" action=\"{{ path('carrito') }}\">
+                        <input type=\"hidden\" name=\"id\" value=\"{{ item.producto.cod_prod }}\">
+                        <td class=\"align-middle text-center\">
+                            <input type=\"submit\" class=\"btn btn-danger py-0 px-4\" value=\"X\">
+                        </td>
+                    </form>
                 </tr>
                 {% set compra = true %}
             {% endfor %}

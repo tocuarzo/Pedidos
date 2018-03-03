@@ -12,15 +12,19 @@
                 <tbody>
                 {% for producto in productos %}
                     <tr>
-                        {{ form_start(form) }}
-                        <th class="align-middle" scope="row">{{ producto.cod_prod }}</th>
+                            <th class="align-middle" scope="row">{{ producto.cod_prod }}</th>
                             <td class="align-middle">{{ producto.nombre }}</td>
                             <td class="align-middle">{{ producto.categoria.nombre}}</td>
                             <td class="align-middle">{{ producto.precio }}</td>
-                            <td>
-                                {{ form_widget(form.cantidad, {'attr' : {'class' : 'form-control'}}) }}</td><td>{{ form_widget(form.submit, {'attr' : {'class' : 'btn btn-outline-primary'}}) }}
-                            </td>
-                        {{ form_end(form) }}
+                            <form method="POST" action="{{ path('principal') }}">
+                                <input type="hidden" name="id" value="{{ producto.cod_prod }}">
+                                <td>
+                                    <input name="cantidad" type="number" min="1" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="submit" class="btn btn-outline-primary" value="añadir al carrito">
+                                </td>
+                            </form>
                     </tr>
                 {% endfor %}
                 </tbody>
