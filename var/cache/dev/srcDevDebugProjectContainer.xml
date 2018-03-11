@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">D:\Pedidos\src</parameter>
-    <parameter key="kernel.project_dir">D:\Pedidos</parameter>
+    <parameter key="kernel.root_dir">C:\Pedidos\src</parameter>
+    <parameter key="kernel.project_dir">C:\Pedidos</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">src</parameter>
-    <parameter key="kernel.cache_dir">D:\Pedidos\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">D:\Pedidos\var\log</parameter>
+    <parameter key="kernel.cache_dir">C:\Pedidos\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">C:\Pedidos\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
@@ -17,54 +17,54 @@
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
       <parameter key="WebServerBundle">Symfony\Bundle\WebServerBundle\WebServerBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
-      <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="TwigBundle">Symfony\Bundle\TwigBundle\TwigBundle</parameter>
       <parameter key="EasyAdminBundle">EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle</parameter>
+      <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">C:\Pedidos\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">C:\Pedidos\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="DoctrineCacheBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\doctrine\doctrine-cache-bundle</parameter>
+        <parameter key="path">C:\Pedidos\vendor\doctrine\doctrine-cache-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineCacheBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">C:\Pedidos\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">C:\Pedidos\vendor\doctrine\doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">C:\Pedidos\vendor\symfony\security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\symfony\web-server-bundle</parameter>
+        <parameter key="path">C:\Pedidos\vendor\symfony\web-server-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\sensio\framework-extra-bundle</parameter>
+        <parameter key="path">C:\Pedidos\vendor\sensio\framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
-      <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\symfony\web-profiler-bundle</parameter>
-        <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
-      </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">C:\Pedidos\vendor\symfony\twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="EasyAdminBundle" type="collection">
-        <parameter key="path">D:\Pedidos\vendor\easycorp\easyadmin-bundle\src</parameter>
+        <parameter key="path">C:\Pedidos\vendor\easycorp\easyadmin-bundle\src</parameter>
         <parameter key="namespace">EasyCorp\Bundle\EasyAdminBundle</parameter>
+      </parameter>
+      <parameter key="WebProfilerBundle" type="collection">
+        <parameter key="path">C:\Pedidos\vendor\symfony\web-profiler-bundle</parameter>
+        <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -87,22 +87,22 @@
       <parameter key="cookie_httponly">true</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">D:\Pedidos\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">C:\Pedidos\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
     <parameter key="asset.request_context.base_path"></parameter>
     <parameter key="asset.request_context.secure">false</parameter>
     <parameter key="validator.mapping.cache.prefix"></parameter>
-    <parameter key="validator.mapping.cache.file">D:\Pedidos\var\cache\dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:\Pedidos\var\cache\dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="translator.logging">true</parameter>
-    <parameter key="translator.default_path">D:\Pedidos/translations</parameter>
+    <parameter key="translator.default_path">C:\Pedidos/translations</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:D:\Pedidos\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:\Pedidos\var\cache\dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">D:\Pedidos\var\cache\dev/srcDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\Pedidos\var\cache\dev/srcDevDebugProjectContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -217,9 +217,9 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">D:\Pedidos\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\Pedidos\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
-    <parameter key="doctrine_migrations.dir_name">D:\Pedidos/src/Migrations</parameter>
+    <parameter key="doctrine_migrations.dir_name">C:\Pedidos/src/Migrations</parameter>
     <parameter key="doctrine_migrations.namespace">DoctrineMigrations</parameter>
     <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
     <parameter key="doctrine_migrations.name">Application Migrations</parameter>
@@ -237,13 +237,11 @@
     <parameter key="security.authentication.session_strategy.strategy">migrate</parameter>
     <parameter key="security.access.always_authenticate_before_granting">false</parameter>
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
-    <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
-    <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="twig.exception_listener.controller">twig.controller.exception:showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">D:\Pedidos/templates</parameter>
+    <parameter key="twig.default_path">C:\Pedidos/templates</parameter>
     <parameter key="easyadmin.config" type="collection">
       <parameter key="design" type="collection">
         <parameter key="menu" type="collection">
@@ -259,6 +257,10 @@
           <parameter type="collection">
             <parameter key="label">Categorias</parameter>
             <parameter key="entity">Categoria</parameter>
+          </parameter>
+          <parameter type="collection">
+            <parameter key="label">Pedidos</parameter>
+            <parameter key="entity">PedidoProducto</parameter>
           </parameter>
           <parameter type="collection">
             <parameter key="label">Volver</parameter>
@@ -334,6 +336,18 @@
           </parameter>
           <parameter key="name">Categoria</parameter>
         </parameter>
+        <parameter key="PedidoProducto" type="collection">
+          <parameter key="class">App\Entity\PedidoProducto</parameter>
+          <parameter key="list" type="collection">
+            <parameter key="fields" type="collection">
+              <parameter>cod_ped_prod</parameter>
+              <parameter>cod_ped</parameter>
+              <parameter>cod_prod</parameter>
+              <parameter>unidades</parameter>
+            </parameter>
+          </parameter>
+          <parameter key="name">PedidoProducto</parameter>
+        </parameter>
       </parameter>
       <parameter key="formats" type="collection">
         <parameter key="date">Y-m-d</parameter>
@@ -358,7 +372,9 @@
         <parameter key="max_results">10</parameter>
       </parameter>
     </parameter>
-    <parameter key="easyadmin.cache.dir">D:\Pedidos\var\cache\dev/easy_admin</parameter>
+    <parameter key="easyadmin.cache.dir">C:\Pedidos\var\cache\dev/easy_admin</parameter>
+    <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
+    <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -476,7 +492,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.WxrPglx"/>
+      <argument type="service" id="service_locator.CYZb6xg"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -528,9 +544,9 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem" public="true"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>D:\Pedidos\src/Resources</argument>
+      <argument>C:\Pedidos\src/Resources</argument>
       <argument type="collection">
-        <argument>D:\Pedidos\src</argument>
+        <argument>C:\Pedidos\src</argument>
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner" public="false">
@@ -672,8 +688,8 @@
       <argument type="service" id="translator.data_collector"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>D:\Pedidos/translations</argument>
-      <argument>D:\Pedidos/templates</argument>
+      <argument>C:\Pedidos/translations</argument>
+      <argument>C:\Pedidos/templates</argument>
       <call method="setName">
         <argument>debug:translation</argument>
       </call>
@@ -684,8 +700,8 @@
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
       <argument>en</argument>
-      <argument>D:\Pedidos/translations</argument>
-      <argument>D:\Pedidos/templates</argument>
+      <argument>C:\Pedidos/translations</argument>
+      <argument>C:\Pedidos/templates</argument>
       <call method="setName">
         <argument>translation:update</argument>
       </call>
@@ -769,7 +785,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\Pedidos\var\cache\dev/pools</argument>
+      <argument>C:\Pedidos\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -798,7 +814,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>D:\Pedidos\var\cache\dev/pools</argument>
+      <argument>C:\Pedidos\var\cache\dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
@@ -856,14 +872,14 @@
       </argument>
     </service>
     <service id="translator.selector" class="Symfony\Component\Translation\MessageSelector" public="false"/>
-    <service id="2_ServiceLocator~NinboKk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="2_ServiceLocator~A5..kj6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="session" type="service" id="session" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="1_NativeFileSessionHandler~NinboKk" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>D:\Pedidos\var\cache\dev/sessions</argument>
+    <service id="1_NativeFileSessionHandler~A5..kj6" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>C:\Pedidos\var\cache\dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -886,18 +902,18 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>D:\Pedidos\var\cache\dev/sessions</argument>
+      <argument>C:\Pedidos\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id="1_NativeFileSessionHandler~NinboKk"/>
+      <argument type="service" id="1_NativeFileSessionHandler~A5..kj6"/>
     </service>
     <service id="session_listener" class="Symfony\Component\HttpKernel\EventListener\SessionListener" public="false">
       <tag name="kernel.event_subscriber"/>
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
-      <argument type="service" id="2_ServiceLocator~NinboKk"/>
+      <argument type="service" id="2_ServiceLocator~A5..kj6"/>
     </service>
     <service id="session.save_listener" class="Symfony\Component\HttpKernel\EventListener\SaveSessionListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -913,7 +929,7 @@
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy" public="false">
-      <argument type="service" id="1_ResolvedFormTypeFactory~YQx0LdF"/>
+      <argument type="service" id="1_ResolvedFormTypeFactory~N9T.JHm"/>
       <argument type="service" id="data_collector.form"/>
     </service>
     <service id="form.registry" class="Symfony\Component\Form\FormRegistry" public="false">
@@ -1039,8 +1055,8 @@
       <argument type="service" id="assets.empty_version_strategy"/>
       <argument type="service" id="assets.context"/>
     </service>
-    <service id="1_PhpArrayAdapter~FA0xpB7" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>D:\Pedidos\var\cache\dev/validation.php</argument>
+    <service id="1_PhpArrayAdapter~JCZ6Qcn" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>C:\Pedidos\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1056,7 +1072,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>D:\Pedidos\vendor\symfony\form/Resources/config/validation.xml</argument>
+          <argument>C:\Pedidos\vendor\symfony\form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1075,11 +1091,11 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>D:\Pedidos\var\cache\dev/validation.php</argument>
+      <argument>C:\Pedidos\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
     </service>
     <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache" public="false">
-      <argument type="service" id="1_PhpArrayAdapter~FA0xpB7"/>
+      <argument type="service" id="1_PhpArrayAdapter~JCZ6Qcn"/>
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory" public="false">
       <argument type="service" id="service_locator.O9Ft2wK"/>
@@ -1133,296 +1149,296 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">D:\Pedidos\var\cache\dev/translations</argument>
+        <argument key="cache_dir">C:\Pedidos\var\cache\dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ar.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ar.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.ar.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ar.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ar.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.ar.xlf</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.az.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.az.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.bg.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.bg.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.bg.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.bg.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.bg.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ca.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ca.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.ca.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ca.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ca.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.ca.xlf</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.cs.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.cs.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.cs.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.cs.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.cs.xlf</argument>
           </argument>
           <argument key="cy" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.da.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.da.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.da.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.da.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.da.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.da.xlf</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.de.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.de.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.de.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.de.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.de.xlf</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.el.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.en.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.en.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.en.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.en.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.en.xlf</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.es.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.es.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.es.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.es.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.es.xlf</argument>
           </argument>
           <argument key="et" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.eu.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.eu.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.eu.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.eu.xlf</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.fa.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.fa.xlf</argument>
           </argument>
           <argument key="fi" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.fi.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.fi.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.fi.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.fi.xlf</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.fr.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.fr.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.fr.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.fr.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.gl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.he.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.hr.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.hr.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.hr.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.hr.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.hr.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.hr.xlf</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.hu.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.hu.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.hu.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.hu.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.hu.xlf</argument>
           </argument>
           <argument key="hy" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.id.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.id.xlf</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.it.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.it.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.it.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.it.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.it.xlf</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ja.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ja.xlf</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.lb.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.lt.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.lt.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.lt.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.lt.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.lt.xlf</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.lv.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.lv.xlf</argument>
           </argument>
           <argument key="mn" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.nb.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.nl.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.nl.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.nl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.nl.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.nl.xlf</argument>
           </argument>
           <argument key="nn" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.nn.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.no.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.no.xlf</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.pl.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.pl.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.pl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.pl.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.pl.xlf</argument>
           </argument>
           <argument key="pt" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.pt.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.pt.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.pt.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.pt_BR.xlf</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ro.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ro.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.ro.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ro.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.ro.xlf</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ru.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ru.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.ru.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.ru.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.ru.xlf</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sk.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sk.xlf</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sl.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.sl.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.sl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sl.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.sl.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.sl.xlf</argument>
           </argument>
           <argument key="sq" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sr_Cyrl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sv.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.sv.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.sv.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.sv.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.th.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.th.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.tr.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.tr.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.tr.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.tr.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.tr.xlf</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.uk.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.uk.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.uk.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.uk.xlf</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.vi.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.zh_CN.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.zh_CN.xlf</argument>
-            <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.zh_CN.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\EasyAdminBundle.zh_CN.xlf</argument>
+            <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/translations\messages.zh_CN.xlf</argument>
           </argument>
           <argument key="zh_TW" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
           </argument>
           <argument key="pt_PT" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.pt_PT.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.pt_PT.xlf</argument>
           </argument>
           <argument key="ua" type="collection">
-            <argument>D:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ua.xlf</argument>
+            <argument>C:\Pedidos\vendor\symfony\security\Core/Resources/translations\security.ua.xlf</argument>
           </argument>
         </argument>
       </argument>
@@ -1695,7 +1711,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:D:\Pedidos\var\cache\dev/profiler</argument>
+      <argument>file:C:\Pedidos\var\cache\dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -1732,7 +1748,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>D:\Pedidos\var\cache\dev/srcDevDebugProjectContainer</argument>
+      <argument>C:\Pedidos\var\cache\dev/srcDevDebugProjectContainer</argument>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
       <tag name="data_collector" template="@WebProfiler/Collector/time.html.twig" id="time" priority="330"/>
@@ -1770,7 +1786,7 @@
         <argument type="service" id="cache.annotations"/>
       </call>
     </service>
-    <service id="1_ResolvedFormTypeFactory~YQx0LdF" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+    <service id="1_ResolvedFormTypeFactory~N9T.JHm" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
     <service id="form.type_extension.form.data_collector" class="Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension" public="false">
       <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
       <argument type="service" id="data_collector.form"/>
@@ -1828,7 +1844,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" public="false">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>D:\Pedidos</argument>
+      <argument>C:\Pedidos</argument>
       <argument>/_profiler/open?file=%%f&amp;line=%%l#line%%l</argument>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -2138,18 +2154,18 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
-        <argument>kernel.response</argument>
-        <argument type="collection">
-          <argument type="service" id="web_profiler.debug_toolbar"/>
-          <argument>onKernelResponse</argument>
-        </argument>
-        <argument>-128</argument>
-      </call>
-      <call method="addListener">
         <argument>kernel.exception</argument>
         <argument type="collection">
           <argument type="service" id="twig.exception_listener"/>
           <argument>onKernelException</argument>
+        </argument>
+        <argument>-128</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.response</argument>
+        <argument type="collection">
+          <argument type="service" id="web_profiler.debug_toolbar"/>
+          <argument>onKernelResponse</argument>
         </argument>
         <argument>-128</argument>
       </call>
@@ -2233,7 +2249,7 @@
       <argument type="service" id="service_container"/>
       <argument>kernel:loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">D:\Pedidos\var\cache\dev</argument>
+        <argument key="cache_dir">C:\Pedidos\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -2274,7 +2290,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>D:\Pedidos</argument>
+      <argument>C:\Pedidos</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -2300,12 +2316,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id="2_PhpArrayAdapter~654tL8b" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>D:\Pedidos\var\cache\dev/annotations.php</argument>
+    <service id="2_PhpArrayAdapter~c4L7JYk" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>C:\Pedidos\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id="1_ArrayCache~654tL8b" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id="1_ArrayCache~c4L7JYk" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -2319,7 +2335,7 @@
     </service>
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id="1_ArrayCache~654tL8b"/>
+      <argument type="service" id="1_ArrayCache~c4L7JYk"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -2329,12 +2345,12 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>D:\Pedidos\var\cache\dev/annotations.php</argument>
+      <argument>C:\Pedidos\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!AbstractController$|Controller$))#</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id="2_PhpArrayAdapter~654tL8b"/>
+      <argument type="service" id="2_PhpArrayAdapter~c4L7JYk"/>
     </service>
     <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor" public="false">
       <argument>false</argument>
@@ -2343,7 +2359,7 @@
     </service>
     <service id="maker.file_manager" class="Symfony\Bundle\MakerBundle\FileManager" public="false">
       <argument type="service" id="filesystem"/>
-      <argument>D:\Pedidos</argument>
+      <argument>C:\Pedidos</argument>
     </service>
     <service id="maker.event_registry" class="Symfony\Bundle\MakerBundle\EventRegistry" public="false">
       <argument type="service" id="debug.event_dispatcher"/>
@@ -2394,7 +2410,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration" public="false">
       <tag name="maker.command"/>
-      <argument>D:\Pedidos</argument>
+      <argument>C:\Pedidos</argument>
     </service>
     <service id="doctrine_cache.abstract.apc" class="Doctrine\Common\Cache\ApcCache" abstract="true"/>
     <service id="doctrine_cache.abstract.apcu" class="Doctrine\Common\Cache\ApcuCache" abstract="true"/>
@@ -2685,7 +2701,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>D:\Pedidos\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>C:\Pedidos\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -2715,7 +2731,7 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>D:\Pedidos\src\Entity</argument>
+        <argument>C:\Pedidos\src\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
@@ -2726,17 +2742,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_515dd6ff7a89e703772aec5720289fb236c49effaaaeb1f236b74de218c88ab1</argument>
+        <argument>sf_orm_default_d211e1913ac85e610d44acf5ea078ff85b6972ed00daa5ee4d15c4bc2bf9dcc4</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_515dd6ff7a89e703772aec5720289fb236c49effaaaeb1f236b74de218c88ab1</argument>
+        <argument>sf_orm_default_d211e1913ac85e610d44acf5ea078ff85b6972ed00daa5ee4d15c4bc2bf9dcc4</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_515dd6ff7a89e703772aec5720289fb236c49effaaaeb1f236b74de218c88ab1</argument>
+        <argument>sf_orm_default_d211e1913ac85e610d44acf5ea078ff85b6972ed00daa5ee4d15c4bc2bf9dcc4</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerAwareEntityListenerResolver">
@@ -2776,7 +2792,7 @@
     <service id="doctrine_migrations.version_command" class="Doctrine\Bundle\MigrationsBundle\Command\MigrationsVersionDoctrineCommand">
       <tag name="console.command"/>
     </service>
-    <service id="1_ServiceLocator~lZVe2TN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="1_ServiceLocator~83KCwR9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="security.authorization_checker" type="service" id="security.authorization_checker"/>
@@ -2793,7 +2809,7 @@
       <tag name="kernel.reset" method="setToken"/>
     </service>
     <service id="security.helper" class="Symfony\Component\Security\Core\Security" public="false">
-      <argument type="service" id="1_ServiceLocator~lZVe2TN"/>
+      <argument type="service" id="1_ServiceLocator~83KCwR9"/>
     </service>
     <service id="security.user_value_resolver" class="Symfony\Bundle\SecurityBundle\SecurityUserValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="40"/>
@@ -3403,7 +3419,7 @@
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command" command="server:run"/>
-      <argument>D:\Pedidos/public</argument>
+      <argument>C:\Pedidos/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:run</argument>
@@ -3411,7 +3427,7 @@
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command" command="server:start"/>
-      <argument>D:\Pedidos/public</argument>
+      <argument>C:\Pedidos/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:start</argument>
@@ -3508,58 +3524,11 @@
     <service id="framework_extra_bundle.argument_name_convertor" class="Sensio\Bundle\FrameworkExtraBundle\Request\ArgumentNameConverter" public="false">
       <argument type="service" id="argument_metadata_factory"/>
     </service>
-    <service id="2_HtmlDumper~s4O80Bu" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
-      <argument>null</argument>
-      <argument>UTF-8</argument>
-      <argument>1</argument>
-      <call method="setDisplayOptions">
-        <argument type="collection">
-          <argument key="maxStringLength">4096</argument>
-          <argument key="fileLinkFormat" type="service" id="debug.file_link_formatter"/>
-        </argument>
-      </call>
-    </service>
-    <service id="1_NonceGenerator~s4O80Bu" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
-    <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController" public="true">
-      <argument type="service" id="router.default" on-invalid="null"/>
-      <argument type="service" id="profiler" on-invalid="null"/>
-      <argument type="service" id="twig"/>
-      <argument>%data_collector.templates%</argument>
-      <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>D:\Pedidos</argument>
-    </service>
-    <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
-      <argument type="service" id="profiler" on-invalid="null"/>
-      <argument type="service" id="twig"/>
-      <argument type="service" id="router.default" on-invalid="null"/>
-    </service>
-    <service id="web_profiler.controller.exception" class="Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController" public="true">
-      <argument type="service" id="profiler" on-invalid="null"/>
-      <argument type="service" id="twig"/>
-      <argument>true</argument>
-    </service>
-    <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
-      <argument type="service" id="1_NonceGenerator~s4O80Bu"/>
-    </service>
-    <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
-      <tag name="twig.extension"/>
-      <argument type="service" id="2_HtmlDumper~s4O80Bu"/>
-    </service>
-    <service id="web_profiler.debug_toolbar" class="Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener" public="false">
-      <tag name="kernel.event_subscriber"/>
-      <tag name="container.hot_path"/>
-      <argument type="service" id="twig"/>
-      <argument>false</argument>
-      <argument>2</argument>
-      <argument type="service" id="router.default" on-invalid="ignore"/>
-      <argument>^/(app(_[\w]+)?\.php/)?_wdt</argument>
-      <argument type="service" id="web_profiler.csp.handler"/>
-    </service>
     <service id="twig" class="Twig\Environment" public="true">
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="paths" type="collection">
-          <argument key="D:\Pedidos/templates">null</argument>
+          <argument key="C:\Pedidos/templates">null</argument>
         </argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -3568,9 +3537,9 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">D:\Pedidos\var\cache\dev/twig</argument>
+        <argument key="cache">C:\Pedidos\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
-        <argument key="default_path">D:\Pedidos/templates</argument>
+        <argument key="default_path">C:\Pedidos/templates</argument>
         <argument key="date" type="collection">
           <argument key="format">F j, Y H:i</argument>
           <argument key="interval_format">%d days</argument>
@@ -3590,9 +3559,6 @@
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.security"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.webprofiler"/>
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.profiler"/>
@@ -3630,6 +3596,9 @@
       <call method="addExtension">
         <argument type="service" id="easyadmin.twig.extension"/>
       </call>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension.webprofiler"/>
+      </call>
       <call method="addGlobal">
         <argument>app</argument>
         <argument type="service" id="twig.app_variable"/>
@@ -3660,16 +3629,16 @@
       <argument type="service" id="service_locator.WXS0TxV.twig.cache_warmer"/>
       <argument>null</argument>
       <argument type="collection">
-        <argument key="D:\Pedidos/templates">null</argument>
-        <argument key="D:\Pedidos\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+        <argument key="C:\Pedidos/templates">null</argument>
+        <argument key="C:\Pedidos\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
       </argument>
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>D:\Pedidos\src</argument>
+      <argument>C:\Pedidos\src</argument>
       <argument type="collection">
-        <argument key="D:\Pedidos/templates">null</argument>
-        <argument key="D:\Pedidos\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+        <argument key="C:\Pedidos/templates">null</argument>
+        <argument key="C:\Pedidos\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
       </argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
@@ -3682,63 +3651,63 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader" public="false">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>D:\Pedidos</argument>
+      <argument>C:\Pedidos</argument>
       <call method="addPath">
-        <argument>D:\Pedidos/templates</argument>
+        <argument>C:\Pedidos/templates</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\framework-bundle/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\symfony\framework-bundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\framework-bundle/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\symfony\framework-bundle/Resources/views</argument>
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\web-profiler-bundle/Resources/views</argument>
-        <argument>WebProfiler</argument>
-      </call>
-      <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\web-profiler-bundle/Resources/views</argument>
-        <argument>!WebProfiler</argument>
-      </call>
-      <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\twig-bundle/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\symfony\twig-bundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\twig-bundle/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\symfony\twig-bundle/Resources/views</argument>
         <argument>!Twig</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/views</argument>
         <argument>EasyAdmin</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/views</argument>
+        <argument>C:\Pedidos\vendor\easycorp\easyadmin-bundle\src/Resources/views</argument>
         <argument>!EasyAdmin</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos/templates</argument>
+        <argument>C:\Pedidos\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Pedidos\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\Pedidos\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>!WebProfiler</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Pedidos/templates</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Pedidos\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -3764,7 +3733,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>D:\Pedidos\src</argument>
+      <argument>C:\Pedidos\src</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -3843,7 +3812,7 @@
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
       <argument type="service" id="twig"/>
-      <argument>D:\Pedidos</argument>
+      <argument>C:\Pedidos</argument>
       <call method="setName">
         <argument>debug:twig</argument>
       </call>
@@ -3856,7 +3825,7 @@
       </call>
     </service>
     <service id="easyadmin.cache.manager" class="EasyCorp\Bundle\EasyAdminBundle\Cache\CacheManager" public="true">
-      <argument>D:\Pedidos\var\cache\dev/easy_admin</argument>
+      <argument>C:\Pedidos\var\cache\dev/easy_admin</argument>
     </service>
     <service id="easyadmin.config.manager" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager" public="true">
       <argument type="service" id="easyadmin.cache.manager"/>
@@ -4022,6 +3991,53 @@
       <tag name="form.type_guesser"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="2_HtmlDumper~Cg.EsRj" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+      <argument>null</argument>
+      <argument>UTF-8</argument>
+      <argument>1</argument>
+      <call method="setDisplayOptions">
+        <argument type="collection">
+          <argument key="maxStringLength">4096</argument>
+          <argument key="fileLinkFormat" type="service" id="debug.file_link_formatter"/>
+        </argument>
+      </call>
+    </service>
+    <service id="1_NonceGenerator~Cg.EsRj" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+    <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController" public="true">
+      <argument type="service" id="router.default" on-invalid="null"/>
+      <argument type="service" id="profiler" on-invalid="null"/>
+      <argument type="service" id="twig"/>
+      <argument>%data_collector.templates%</argument>
+      <argument type="service" id="web_profiler.csp.handler"/>
+      <argument>C:\Pedidos</argument>
+    </service>
+    <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
+      <argument type="service" id="profiler" on-invalid="null"/>
+      <argument type="service" id="twig"/>
+      <argument type="service" id="router.default" on-invalid="null"/>
+    </service>
+    <service id="web_profiler.controller.exception" class="Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController" public="true">
+      <argument type="service" id="profiler" on-invalid="null"/>
+      <argument type="service" id="twig"/>
+      <argument>true</argument>
+    </service>
+    <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
+      <argument type="service" id="1_NonceGenerator~Cg.EsRj"/>
+    </service>
+    <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
+      <tag name="twig.extension"/>
+      <argument type="service" id="2_HtmlDumper~Cg.EsRj"/>
+    </service>
+    <service id="web_profiler.debug_toolbar" class="Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener" public="false">
+      <tag name="kernel.event_subscriber"/>
+      <tag name="container.hot_path"/>
+      <argument type="service" id="twig"/>
+      <argument>false</argument>
+      <argument>2</argument>
+      <argument type="service" id="router.default" on-invalid="ignore"/>
+      <argument>^/((index|app(_[\w]+)?)\.php/)?_wdt</argument>
+      <argument type="service" id="web_profiler.csp.handler"/>
+    </service>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\Login" class="App\Controller\Login" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Controller\Login" class="App\Controller\Login" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\Tienda" class="App\Controller\Tienda" public="false" autowire="true" abstract="true"/>
@@ -4154,21 +4170,37 @@
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
+    <service id="service_locator.iHSAIeU" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="session" type="service" id="session" on-invalid="ignore"/>
+      </argument>
+    </service>
     <service id="service_locator.s6JY3QR" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="session" type="service" id="session" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.WxrPglx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.RSh3j3S" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="session" type="service" id="session" on-invalid="ignore"/>
+      </argument>
+    </service>
+    <service id="service_locator.CYZb6xg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\Login:jsontest" type="service" id="service_locator.iHSAIeU"/>
         <argument key="App\Controller\Login:login" type="service" id="service_locator.8crJbMu"/>
         <argument key="App\Controller\Tienda:carrito" type="service" id="service_locator.s6JY3QR"/>
         <argument key="App\Controller\Tienda:menuPrincipal" type="service" id="service_locator.s6JY3QR"/>
+        <argument key="App\Controller\Tienda:procesar" type="service" id="service_locator.RSh3j3S"/>
+        <argument key="App\Controller\Login::jsontest" type="service" id="service_locator.iHSAIeU"/>
         <argument key="App\Controller\Login::login" type="service" id="service_locator.8crJbMu"/>
         <argument key="App\Controller\Tienda::carrito" type="service" id="service_locator.s6JY3QR"/>
         <argument key="App\Controller\Tienda::menuPrincipal" type="service" id="service_locator.s6JY3QR"/>
+        <argument key="App\Controller\Tienda::procesar" type="service" id="service_locator.RSh3j3S"/>
       </argument>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
@@ -4429,42 +4461,42 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
-      <argument>SMgbywcw1X</argument>
+      <argument>hwW3GjAT9h</argument>
       <argument>0</argument>
-      <argument>D:\Pedidos\var\cache\dev/pools</argument>
+      <argument>C:\Pedidos\var\cache\dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>SBK7ELoEPx</argument>
+      <argument>KnvtpMVUdB</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\Pedidos\var\cache\dev/pools</argument>
+      <argument>C:\Pedidos\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>zFpsJsSUSw</argument>
+      <argument>uI-jU1osT7</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\Pedidos\var\cache\dev/pools</argument>
+      <argument>C:\Pedidos\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>yCywDgp4ZW</argument>
+      <argument>wi0DSo6Klu</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\Pedidos\var\cache\dev/pools</argument>
+      <argument>C:\Pedidos\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>pS3hOrSxoG</argument>
+      <argument>W-9PYovCTh</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\Pedidos\var\cache\dev/pools</argument>
+      <argument>C:\Pedidos\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -4566,8 +4598,8 @@
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
-    <service id="service_locator.FaDxC1e" alias="2_ServiceLocator~NinboKk" public="false"/>
-    <service id="service_locator.DL1KH.a" alias="1_ServiceLocator~lZVe2TN" public="false"/>
+    <service id="service_locator.FaDxC1e" alias="2_ServiceLocator~A5..kj6" public="false"/>
+    <service id="service_locator.DL1KH.a" alias="1_ServiceLocator~83KCwR9" public="false"/>
     <service id="validator" alias="debug.validator" public="true"/>
     <service id="translator.data_collector.inner" alias="translator.default" public="false"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>

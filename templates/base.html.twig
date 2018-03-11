@@ -2,33 +2,39 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <title>{% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
     </head>
     {% set current_path = path(app.request.get('_route')) %}
     <body style="background-color: #4DE885;">
     {% block navbar %}
     <nav class="navbar navbar-expand bg-light">
-        <h4 class="navbar-brand my-0">Bienvenido {{ app.user.correo }}</h4>
-        <div class="navbar w-100 justify-content-between">
-            <div class="btn-group" role="group">
-                <a class="btn btn-outline-success {% if current_path == path('principal') %}
+            <h4 class="navbar-brand my-0">Bienvenido {{ app.user.correo }}</h4>
+            <div class="navbar w-100 justify-content-between">
+                <div class="btn-group" role="group">
+                    <a class="btn btn-outline-success {% if current_path == path('principal') %}
                     active
                   {% endif %}px-5" href="{{ url('principal') }}">Principal</a>
-                <a class="btn btn-outline-success {% if current_path == path('carrito') %}
+                    <a class="btn btn-outline-success {% if current_path == path('carrito') %}
                     active
                   {% endif %}px-5" href="{{ path('carrito') }}">Carrito</a>
-                {% if app.user.admin %}
-                <a class="btn btn-outline-info px-5" href="/zonaAdmin">Zona admin</a>
-                {% endif %}
+                    {% if app.user.admin %}
+                        <a class="btn btn-outline-info px-5" href="/zonaAdmin">Zona admin</a>
+                    {% endif %}
+                </div>
+                <a class="btn btn-danger ml-3" href="{{ path('logout') }}">Cerrar Sesion</a>
             </div>
-        <a class="btn btn-danger ml-3" href="{{ path('logout') }}">Cerrar Sesion</a>
-        </div>
     </nav>
     {% endblock %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    {% block javascripts %}{% endblock %}
     </body>
 </html>

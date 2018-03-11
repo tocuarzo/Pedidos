@@ -30,19 +30,19 @@ class Tienda extends Controller {
 
     public function menuPrincipal(Request $request, SessionInterface $session){
         $em = $this->getDoctrine()->getManager();
-        if (!$carrito = $session->get("carrito")){
+        if (null === $session->get("carrito")){
             $carrito = new Carrito();
             $session->set("carrito", $carrito);
-        }
-        $productos = $em->getRepository(Producto::class)->findAll();
-        if ($request->request->has('cantidad') && $request->request->has('id')) {
-            $uds = $request->request->get("cantidad");
-            $id = $request->request->get("id");
-            $producto = $em->getRepository(Producto::class)->find($id);
-            $carrito->addItem(array("producto" => $producto, "uds" => $uds));
-            $session->set("carrito", $carrito);
-            return $this->redirectToRoute("carrito");
-        }
+        } else $carrito = $session->get("carrito");
+            $productos = $em->getRepository(Producto::class)->findAll();
+            if ($request->request->has('cantidad') && $request->request->has('id')) {
+                $uds = $request->request->get("cantidad");
+                $id = $request->request->get("id");
+                $producto = $em->getRepository(Producto::class)->find($id);
+                $carrito->addItem(array("producto" => $producto, "uds" => $uds));
+                $session->set("carrito", $carrito);
+                return $this->redirectToRoute("carrito");
+            }
         return $this->render("tienda/tienda.html.twig", array("user" => $this->getUser()->getUsername(), "productos" => $productos));
     }
     /**
@@ -55,7 +55,15 @@ class Tienda extends Controller {
             $carrito->removeItem($id);
             $session->set("carrito", $carrito);
         }
+        dump($carrito);
         return $this->render("tienda/carrito.html.twig", array("carrito" => $carrito->getItems()));
+    }
+    /**
+     * @Ruta("/procesarCarrito", name="procesar")
+     */
+    public function procesar(SessionInterface $session){
+        $carrito = $session->get("carrito");
+        return $this->json($carrito->getItems());
     }
 }
 

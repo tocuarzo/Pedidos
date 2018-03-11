@@ -4,7 +4,8 @@ easy_admin:
         - {label: 'Productos',  entity: 'Producto'}
         - {label: 'Usuarios', icon: 'users', entity: 'Usuario'}
         - {label: 'Categorias', entity: 'Categoria'}
-        - { label: 'Volver', icon: 'delete', route: 'principal' }
+        - {label: 'Pedidos', entity: 'PedidoProducto'}
+        - {label: 'Volver', icon: 'delete', route: 'principal' }
     site_name: Mis productos
     entities:
       Producto:
@@ -20,3 +21,7 @@ easy_admin:
         class: App\Entity\Categoria
         list:
             fields: ['cod_cat', 'nombre', 'productos']
+      PedidoProducto:
+        class: App\Entity\PedidoProducto
+        list:
+            fields: ['cod_ped_prod', 'cod_ped', 'cod_prod', 'unidades']

@@ -31,6 +31,7 @@ class Usuario implements UserInterface, \Serializable {
     /**
      * @ORM\Column(type="text")
      * @Assert\Email(message="Esto no es un correo")
+     *
      */
     private $correo;
     /**
@@ -63,7 +64,10 @@ class Usuario implements UserInterface, \Serializable {
 
     /**
      * @return mixed
+     * @ORM\OneToMany(targetEntity="pedido", mappedBy="usuario")
      */
+    private $pedidos;
+
     public function getCod_usu(){
         return $this->cod_usu;
     }
@@ -222,5 +226,9 @@ class Usuario implements UserInterface, \Serializable {
             // see section on salt below
             // $this->salt
             ) = unserialize($serialized);
+    }
+    public function __toString(): String
+    {
+        return $this->correo;
     }
 }

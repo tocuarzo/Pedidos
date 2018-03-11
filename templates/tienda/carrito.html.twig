@@ -33,10 +33,29 @@
         </table>
         {% if (compra) %}
             <div class="text-center">
-                <button class="btn btn-success px-5">Comprar</button>
+                <button id="botonaco" class="btn btn-success px-5">Procesar Pedido</button>
             </div>
 
         {% endif %}
+        <div id="resultado"></div>
     </div>
+    <script type="text/javascript">
+        var boton = $("#botonaco");
+        boton.click(peticionAjax);
 
+        function peticionAjax(){
+            console.log("antes del ajax");
+            var jqxhr =  $.get('{{ path('procesar') }}', function (data){
+                $.each(data, function (key, value){
+                    alert(key + " " + value);
+                }).done(function () {
+                    alert("done")
+                });
+            }, "json");
+            console.log("despues del ajax");
+        }
+
+    </script>
+{% endblock %}
+{% block javascripts %}
 {% endblock %}

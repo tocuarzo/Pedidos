@@ -11,6 +11,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Form\RegistroType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Usuario;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -53,6 +54,12 @@ class Login extends Controller {
             return $this->redirectToRoute("login");
         }
         return $this->render("/login/Registro.html.twig", array("form" => $formularioRegistro->createView()));
+    }
+    /**
+     * @Route("/jsontest", name="json")
+     */
+    public function jsontest(SessionInterface $session){
+
     }
 }
 

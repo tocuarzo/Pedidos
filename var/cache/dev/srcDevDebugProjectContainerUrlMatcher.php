@@ -21,24 +21,27 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         $pathinfo = rawurldecode($rawPathinfo);
         $trimmedPathinfo = rtrim($pathinfo, '/');
         $context = $this->context;
-        $request = $this->request;
+        $request = $this->request ?: $this->createRequest($pathinfo);
         $requestMethod = $canonicalMethod = $context->getMethod();
-        $scheme = $context->getScheme();
 
         if ('HEAD' === $requestMethod) {
             $canonicalMethod = 'GET';
         }
 
-
         // redirect
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'App\\Controller\\Login::redirigir',  '_route' => 'redirect',);
-            if (substr($pathinfo, -1) !== '/') {
+            if ('/' === substr($pathinfo, -1)) {
+                // no-op
+            } elseif ('GET' !== $canonicalMethod) {
+                goto not_redirect;
+            } else {
                 return array_replace($ret, $this->redirect($rawPathinfo.'/', 'redirect'));
             }
 
             return $ret;
         }
+        not_redirect:
 
         // login
         if ('/login' === $pathinfo) {
@@ -55,32 +58,47 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'App\\Controller\\Login::Registro',  '_route' => 'registro',);
         }
 
+        // json
+        if ('/jsontest' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\Login::jsontest',  '_route' => 'json',);
+        }
+
         if (0 === strpos($pathinfo, '/principal')) {
             // principal
             if ('/principal' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'App\\Controller\\Tienda::menuPrincipal',  '_route' => 'principal',);
-                if (substr($pathinfo, -1) !== '/') {
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_principal;
+                } else {
                     return array_replace($ret, $this->redirect($rawPathinfo.'/', 'principal'));
                 }
 
                 return $ret;
             }
+            not_principal:
 
             // carrito
             if ('/principal/carrito' === $pathinfo) {
                 return array (  '_controller' => 'App\\Controller\\Tienda::carrito',  '_route' => 'carrito',);
             }
 
+            // procesar
+            if ('/principal/procesarCarrito' === $pathinfo) {
+                return array (  '_controller' => 'App\\Controller\\Tienda::procesar',  '_route' => 'procesar',);
+            }
+
         }
 
         elseif (0 === strpos($pathinfo, '/_')) {
             // _twig_error_test
-            if (0 === strpos($pathinfo, '/_error') && preg_match('#^/_error/(?P<code>\\d+)(?:\\.(?P<_format>[^/]++))?$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/_error') && preg_match('#^/_error/(?P<code>\\d+)(?:\\.(?P<_format>[^/]++))?$#sD', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => '_twig_error_test')), array (  '_controller' => 'twig.controller.preview_error:previewErrorPageAction',  '_format' => 'html',));
             }
 
             // _wdt
-            if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => '_wdt')), array (  '_controller' => 'web_profiler.controller.profiler:toolbarAction',));
             }
 
@@ -88,12 +106,17 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // _profiler_home
                 if ('/_profiler' === $trimmedPathinfo) {
                     $ret = array (  '_controller' => 'web_profiler.controller.profiler:homeAction',  '_route' => '_profiler_home',);
-                    if (substr($pathinfo, -1) !== '/') {
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not__profiler_home;
+                    } else {
                         return array_replace($ret, $this->redirect($rawPathinfo.'/', '_profiler_home'));
                     }
 
                     return $ret;
                 }
+                not__profiler_home:
 
                 if (0 === strpos($pathinfo, '/_profiler/search')) {
                     // _profiler_search
@@ -114,7 +137,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // _profiler_search_results
-                if (preg_match('#^/_profiler/(?P<token>[^/]++)/search/results$#s', $pathinfo, $matches)) {
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/search/results$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => '_profiler_search_results')), array (  '_controller' => 'web_profiler.controller.profiler:searchResultsAction',));
                 }
 
@@ -124,22 +147,22 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // _profiler
-                if (preg_match('#^/_profiler/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => '_profiler')), array (  '_controller' => 'web_profiler.controller.profiler:panelAction',));
                 }
 
                 // _profiler_router
-                if (preg_match('#^/_profiler/(?P<token>[^/]++)/router$#s', $pathinfo, $matches)) {
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/router$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => '_profiler_router')), array (  '_controller' => 'web_profiler.controller.router:panelAction',));
                 }
 
                 // _profiler_exception
-                if (preg_match('#^/_profiler/(?P<token>[^/]++)/exception$#s', $pathinfo, $matches)) {
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/exception$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => '_profiler_exception')), array (  '_controller' => 'web_profiler.controller.exception:showAction',));
                 }
 
                 // _profiler_exception_css
-                if (preg_match('#^/_profiler/(?P<token>[^/]++)/exception\\.css$#s', $pathinfo, $matches)) {
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/exception\\.css$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => '_profiler_exception_css')), array (  '_controller' => 'web_profiler.controller.exception:cssAction',));
                 }
 
@@ -151,22 +174,32 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             // easyadmin
             if ('/zonaAdmin' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'easyadmin',);
-                if (substr($pathinfo, -1) !== '/') {
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_easyadmin;
+                } else {
                     return array_replace($ret, $this->redirect($rawPathinfo.'/', 'easyadmin'));
                 }
 
                 return $ret;
             }
+            not_easyadmin:
 
             // admin
             if ('/zonaAdmin' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
-                if (substr($pathinfo, -1) !== '/') {
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_admin;
+                } else {
                     return array_replace($ret, $this->redirect($rawPathinfo.'/', 'admin'));
                 }
 
                 return $ret;
             }
+            not_admin:
 
         }
 
